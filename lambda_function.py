@@ -8,7 +8,7 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 vehiclesTable = dynamodb.Table(dbTableName)
 
 def lambda_handler(event, context):
-    print('Code updated!')
+    print('Code updated, again!')
     print(event)
     bucket = event['Records'][0]['s3']['bucket']['name']
     key = event['Records'][0]['s3']['object']['key'] #image name, should be like Shivam_Garg_C20.jpg
